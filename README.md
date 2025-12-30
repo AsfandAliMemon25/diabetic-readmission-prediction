@@ -21,17 +21,15 @@ Key patient and hospitalization features used:
 ```bash
 git clone <your-repo-url>
 cd <repo-folder>
-Create environment and install dependencies:
 
-bash
-Copy code
+Create environment and install dependencies:
 conda create -n readmission python=3.11
 conda activate readmission
-pip install -r requirement.txt
-Run Flask API:
 
-bash
-Copy code
+Install dependencies:
+pip install -r requirement.txt
+
+Run Flask API:
 python app.py
 Access at: http://127.0.0.1:8000
 
@@ -56,21 +54,15 @@ Copy code
 {
     "prediction": ">30"
 }
+
 Docker Deployment
 Build Docker image:
-
-bash
-Copy code
 docker build -t xgb-flask-api .
-Run container:
 
-bash
-Copy code
+Run container:
 docker run -p 8000:8000 xgb-flask-api
 
 Notes
 Handles unseen categorical values safely during prediction.
-Can be deployed to cloud platforms: AWS, GCP Cloud Run, Heroku.
-Handles unseen categorical values safely during prediction.
-
-Can be deployed to cloud platforms: AWS, GCP Cloud Run, Heroku.
+Ready for deployment to cloud platforms: AWS ECS/EC2, GCP Cloud Run, or Heroku.
+Suitable for production-ready demonstration of ML model serving.
