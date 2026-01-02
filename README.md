@@ -72,9 +72,9 @@ gcloud run deploy xgb-flask-api \
     --allow-unauthenticated
 
 Live API
+The API is live and can be accessed at:
 https://xgb-flask-api-344385015348.us-central1.run.app
 
 Notes
 Handles unseen categorical values safely during prediction.
-Ready for deployment to cloud platforms: AWS ECS/EC2, GCP Cloud Run, or Heroku.
 Suitable for production-ready demonstration of ML model serving.
