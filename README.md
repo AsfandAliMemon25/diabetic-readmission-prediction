@@ -7,7 +7,7 @@
 
 Welcome to the Diabetes Patient Readmission Prediction repository! This project is aimed at developing a machine-learning model to predict whether a diabetes patient is likely to be readmitted to the hospital within 30 days. Predicting readmission can help healthcare providers better allocate resources and improve patient care.
 
-**## Overview**
+## Overview
 ## Table of Contents
 - [Background](#background)
 - [Installation](#installation)
@@ -17,10 +17,10 @@ Welcome to the Diabetes Patient Readmission Prediction repository! This project 
 -
 - A machine learning project to predict hospital readmission of diabetic patients using historical medical data. This project demonstrates data preprocessing, XGBoost modeling, Flask API deployment, and Docker containerization for real-time predictions.
 
-- ****Install dependencies:**
+  ## Install dependencies
 pip install -r requirement.txt
 
-- ## Usage
+## Usage
 
 Once you have installed the required dependencies, you can use the provided Jupyter notebooks to explore the project:
 
@@ -36,7 +36,7 @@ API: RESTful Flask API for real-time predictions.
 Containerization: Dockerized for easy deployment.
 Cloud Deployment: Live on Google Cloud Run, accessible globally.
 
-**## Features**
+## Features
 Key patient and hospitalization features used:
 
 - Demographics: `age`, `gender`, `race`
@@ -44,23 +44,19 @@ Key patient and hospitalization features used:
 - Lab & medication data: `num_lab_procedures`, `num_medications`, `insulin`, etc.
 - Target: `readmitted` (`<30`, `>30`, `NO`)
 
-**## Local Setup**
+## Local Setup
 1. Clone the repository:
-```bash
-git clone <your-repo-url>
-cd <repo-folder>
 
-Create environment and install dependencies:
+## Create environment and install dependencies:
 conda create -n readmission python=3.11
 conda activate readmission
 
 
-
-**Run Flask API**
+## Local Setup
 python app.py
 Access at: http://127.0.0.1:8000
 
-API Usage
+## API Usage
 POST /predict
 Request JSON:
 
@@ -82,24 +78,24 @@ Copy code
     "prediction": ">30"
 }
 
-Docker Deployment
+## Docker Deployment
 Build Docker image:
 docker build -t xgb-flask-api .
 
 Run container:
 docker run -p 8000:8000 xgb-flask-api
 
-**Cloud Deployment**
+## Cloud Deployment
 gcloud run deploy xgb-flask-api \
     --image gcr.io/diabetic-readmission-api/xgb-flask-api \
     --platform managed \
     --region us-central1 \
     --allow-unauthenticated
 
-Live API
+## Live API
 The API is live and can be accessed at:
 https://xgb-flask-api-344385015348.us-central1.run.app
 
-Notes
+## Notes
 Handles unseen categorical values safely during prediction.
 Suitable for production-ready demonstration of ML model serving.
